@@ -23,3 +23,9 @@ jobs:
 
       - name: Success message
         run: echo "Ubuntu runner is working 🚀"
+
+  build:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "Build job running"
+
