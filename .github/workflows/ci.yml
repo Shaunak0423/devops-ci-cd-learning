@@ -29,3 +29,9 @@ jobs:
       steps:
         - run: echo "Build job running"
 
+  learig_dev_ops:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Learning From Scratch
+        run: echo "Learning CI\CD"
+
