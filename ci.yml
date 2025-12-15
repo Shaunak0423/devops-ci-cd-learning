@@ -1,0 +1,25 @@
+name: Ubuntu CI Start
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  ubuntu-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Confirm Ubuntu
+        run: uname -a
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List files
+        run: ls -la
+
+      - name: Success message
+        run: echo "Ubuntu runner is working 🚀"
