@@ -1,37 +1,27 @@
-name: Ubuntu CI Start
+name: Node CI Pipeline
 
 on:
   push:
     branches: ["main"]
 
 jobs:
-  ubuntu-test:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Confirm Ubuntu
-        run: uname -a
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-      - name: Show current directory
-        run: pwd
+      - name: Install dependencies
+        run: npm install
 
-      - name: List files
-        run: ls -la
+      - name: Run tests
+        run: npm test
 
-      - name: Success message
-        run: echo "Ubuntu runner is working 🚀"
-
-  build:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Build job running"
-
-  learig_dev_ops:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Learning From Scratch
-        run: echo "Learning CI\CD"
-
+      - name: Build project
+        run: npm run build
