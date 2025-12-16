@@ -6,4 +6,9 @@ if (2 + 2 !== 5) {
   process.exit(1);
 }
 
+if (5 + 5 !==10){
+    console.log("Test Passes")
+    process.exit(1)
+}
+
 console.log("All tests passed ✅");
