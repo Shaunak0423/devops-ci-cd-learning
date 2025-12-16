@@ -25,3 +25,6 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Build Test 2
+        run: npm test2
