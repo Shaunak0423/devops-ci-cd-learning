@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "node test.js",
+    "test2": "node test2.js",
     "build": "echo Build successful"
   }
 }
