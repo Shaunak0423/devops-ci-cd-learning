@@ -4,6 +4,7 @@
   "scripts": {
     "test": "node test.js",
     "test2": "node test2.js",
-    "build": "echo Build successful"
+    "build": "echo Build successful",
+    "start": "node index.js"
   }
 }
