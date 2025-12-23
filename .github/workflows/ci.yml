@@ -38,3 +38,8 @@ jobs:
         run: echo "Secret is available"
         env:
           API_KEY: ${{ secrets.API_KEY }}
+
+      - name: Project Web-Link
+        run: echo "Project Link Stored In Env"
+        env:
+          PROJECT_LINK: ${{secrets.PROJECT_LINK}}
