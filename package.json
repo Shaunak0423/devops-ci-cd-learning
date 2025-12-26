@@ -5,6 +5,9 @@
     "test": "node test.js",
     "test2": "node test2.js",
     "build": "echo Build successful",
-    "start": "node test.js"
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "redis": "^5.10.0"
   }
 }
