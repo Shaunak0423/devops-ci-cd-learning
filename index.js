@@ -6,7 +6,9 @@ http.createServer((req, res) => {
   if (req.url === "/health") {
     res.end("Redis says: Docker + Redis working!");
   }
-}).listen(3000);
+}).listen(3000, "0.0.0.0", () => {
+  console.log("Server running on port 3000");
+});
 
 async function startApp() {
   const client = createClient({

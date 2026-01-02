@@ -44,5 +44,5 @@ jobs:
           context: .
           push: true
           tags: |
-            shaunak0422/node-ci-app:latest
-            shaunak0422/node-ci-app:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/node-ci-app:latest
+            ${{ secrets.DOCKER_USERNAME }}/node-ci-app:${{ github.sha }}
