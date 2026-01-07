@@ -4,7 +4,7 @@ const http = require("http");
 
 http.createServer((req, res) => {
   if (req.url === "/health") {
-    res.end("Hoo hoo!!! Version deployed via GitHub Actions!");
+    res.end("Hoo!!! Version deployed via GitHub Actions!");
   }
 }).listen(3000, "0.0.0.0", () => {
   console.log("Server running on port 3000");
