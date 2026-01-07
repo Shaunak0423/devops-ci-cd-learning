@@ -22,5 +22,3 @@ jobs:
                 export IMAGE_TAG=${{ github.sha }}
                 chmod +x deploy-green.sh
                 ./deploy-green.sh
-
-
