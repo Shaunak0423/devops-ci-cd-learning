@@ -45,3 +45,4 @@ jobs:
           tags: |
             shaunak0422/node-ci-app:${{ github.sha }}
             shaunak0422/node-ci-app:latest
+
