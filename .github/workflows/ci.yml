@@ -22,4 +22,5 @@ jobs:
           port: ${{ secrets.EC2_PORT }}
           script: |
             cd ~/deploy
+            chmod +x deploy-green.sh
             ./deploy-green.sh
