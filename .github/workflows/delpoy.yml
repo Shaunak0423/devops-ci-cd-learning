@@ -7,9 +7,6 @@ on:
 
 jobs:
   deploy:
-    if: >
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.name == 'Node CI + Docker Pipeline'
     runs-on: ubuntu-latest
 
     steps:
