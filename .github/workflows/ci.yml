@@ -25,3 +25,4 @@ jobs:
             chmod +x deploy-green.sh
             ./deploy-green.sh
 
+
