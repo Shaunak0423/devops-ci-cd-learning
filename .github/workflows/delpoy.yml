@@ -1,18 +1,16 @@
 name: Deploy Green (Blue-Green)
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Node CI + Docker Pipeline"]
+    types:
+      - completed
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
       - name: Deploy GREEN on EC2
         uses: appleboy/ssh-action@v1.0.0
         with:
@@ -22,5 +20,7 @@ jobs:
             script: |
                 cd ~/deploy
                 export IMAGE_TAG=${{ github.sha }}
+                chmod +x deploy-green.sh
                 ./deploy-green.sh
+
 
